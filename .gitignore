@@ -3,6 +3,7 @@
 /public/build
 /public/hot
 /public/storage
+/public/
 /storage/*.key
 /vendor
 .env
@@ -41,3 +42,5 @@ Homestead.yaml
 Homestead.json
 /.vagrant
 .phpunit.result.cache
+
+
