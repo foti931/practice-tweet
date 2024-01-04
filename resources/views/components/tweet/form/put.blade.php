@@ -1,10 +1,11 @@
 @props([
-    'buttonName' => 'つぶやく',
+    'buttonName' => '編集',
     'tweet'
 ])
 @auth
     <div class="p-4">
-        <form action="{{route('tweet.create') }}" method="post">
+        <form action="{{route('tweet.update.update',['tweetId' => $tweet->id]) }}" method="post">
+            @method('PUT')
             @csrf
             <div class="mt-1">
                 <textarea
@@ -27,5 +28,5 @@
     </div>
 @endauth
 @guest
-    <x-guest></x-guest>
+<x-guest></x-guest>
 @endguest
