@@ -3,7 +3,7 @@ name: laravel
 on:
   push:
   pull_request:
-  check_run:
+  workflow_dispatch:
 
 env:
   DB_USER_NAME: sail
@@ -46,7 +46,5 @@ jobs:
         run: chmod -R 777 storage bootstrap/cache
       - name: Set Hostname
         run: sudo echo "127.0.0.1 mysql.test" | sudo tee -a /etc/hosts
-      - name: build vite
-        run: npm run build
       - name: Execute tests (Unit and Feature tests) via PHPUnit
         run: vendor/bin/phpunit
