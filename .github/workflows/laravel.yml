@@ -10,7 +10,7 @@ env:
   MAIL_FROM_ADDRESS: info@example.com
 
 jobs:
-  phpiunit:
+  phpunit:
 
     runs-on: ubuntu-latest
     services:
