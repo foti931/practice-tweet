@@ -1,8 +1,8 @@
 name: laravel
 
 on:
-  push
-  pull_request
+  push:
+  pull_request:
 
 env:
   DB_USER_NAME: sail
