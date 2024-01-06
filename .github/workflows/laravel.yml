@@ -46,5 +46,9 @@ jobs:
         run: chmod -R 777 storage bootstrap/cache
       - name: Set Hostname
         run: sudo echo "127.0.0.1 mysql.test" | sudo tee -a /etc/hosts
+      - name: npm install
+        run: npm install
+      - name: build vite
+        run: npm run build
       - name: Execute tests (Unit and Feature tests) via PHPUnit
         run: vendor/bin/phpunit
